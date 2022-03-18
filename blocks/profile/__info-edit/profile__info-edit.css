@@ -1,0 +1,24 @@
+.profile__info-edit {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    width: 24px;
+    object-fit: cover;
+    right: -43px;
+    top: 15px;
+    transition: opacity .3s;
+}
+
+.profile__info-edit:hover {    
+    opacity: .6;
+}
+
+@media screen and (max-width: 700px) {
+    .profile__info-edit {
+        margin: 0;
+        width: 18px;
+        right: 19px;
+        top: 8px;
+    }
+}

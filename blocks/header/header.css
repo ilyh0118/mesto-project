@@ -1,0 +1,12 @@
+.header {
+    margin: 0;
+    padding: 0;
+    padding-top: calc(28px + 17 * ((100% - 320px)/(880 - 320)));
+    box-sizing: border-box;
+    background-color: #000;
+    width: 100%;
+    max-width: 880px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Страница содержит приложение, в котором можно создавать свой профиль, редактировать его, а также создавать и редактировать фотогалерею.">
+        <meta name="author" content="Илья Калинин">
+        <meta name="keywords" content="Приложение, фотогалерея, профиль, информация об авторе, форма редактирования профиля">
+        
+        <link rel="stylesheet" href="./pages/index.css">
+
+        <title>Место</title>
+        <link rel="shortcut icon" href="./images/icons/mesto_icon.ico">
+    </head>
+    <body class="page">
+        <header class="header">
+            <img class="header__logo" src="./images/logo_mesto.svg" alt="логотип проекта">
+            <div class="header__line"></div>
+        </header>
+        <main class="content">
+            <section class="profile">
+                <img class="profile__avatar" src="./images/profile_avatar.png" alt="фотокарточка профиля">
+                <div class="profile__info">
+                    <h1 class="profile__author-name">
+                        Жак-Ив Кусто
+                    </h1>
+                    <h3 class="profile__about-author">
+                        Исследователь океана
+                    </h3>
+                    <img class="profile__info-edit" src="./images/Edit_Button.svg" alt="иконка редактирования">
+                </div>
+                <div class="profile__add-btn">
+                </div>
+            </section>
+            <section class="elements">
+                <ul class="elements__grid list">
+                    <li class="elements__group">
+                        <img class="elements__image" src="./images/karachayevsk.jpg" alt="карачаевск">
+                        <div class="elements__title-section">
+                            <h3 class="elements__title">
+                                Карачаевск
+                            </h3>
+                            <label class="elements__label">
+                                <input class="checkbox checkbox_el_like" type="checkbox">
+                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="elements__group">
+                        <img class="elements__image" src="./images/elbrus.jpg" alt="эльбрус">
+                        <div class="elements__title-section">
+                            <h3 class="elements__title">
+                                Гора Эльбрус
+                            </h3>
+                            <label class="elements__label">
+                                <input class="checkbox checkbox_el_like" type="checkbox" checked>
+                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="elements__group">
+                        <img class="elements__image" src="./images/dombay.jpg" alt="домбай">
+                        <div class="elements__title-section">
+                            <h3 class="elements__title">
+                                Домбай
+                            </h3>
+                            <label class="elements__label">
+                                <input class="checkbox checkbox_el_like" type="checkbox">
+                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="elements__group">
+                        <img class="elements__image" src="./images/elbrus.jpg" alt="эльбрус">
+                        <div class="elements__title-section">
+                            <h3 class="elements__title">
+                                Гора Эльбрус
+                            </h3>
+                            <label class="elements__label">
+                                <input class="checkbox checkbox_el_like" type="checkbox" checked>
+                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="elements__group">
+                        <img class="elements__image" src="./images/dombay.jpg" alt="домбай">
+                        <div class="elements__title-section">
+                            <h3 class="elements__title">
+                                Домбай
+                            </h3>
+                            <label class="elements__label">
+                                <input class="checkbox checkbox_el_like" type="checkbox">
+                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="elements__group">
+                        <img class="elements__image" src="./images/karachayevsk.jpg" alt="карачаево-черкесия">
+                        <div class="elements__title-section">
+                            <h3 class="elements__title">
+                                Карачаево-Черкесия
+                            </h3>
+                            <label class="elements__label">
+                                <input class="checkbox checkbox_el_like" type="checkbox" checked>
+                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
+                            </label>
+                        </div>
+                    </li>                    
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <h4 class="footer__copyright">
+                &copy; 2022 Mesto Russia
+            </h4>
+        </footer>
+        <section class="popup">
+            <form class="popup__container">
+                <div class="popup__toggle">
+                    <img class="popup__toggle-image" src="./images/close_icon.svg" alt="крестик-закрыть">
+                </div>
+                <div class="popup__main-container">
+                    <h2 class="popup__heading">
+                        Редактировать профиль
+                    </h2>
+                    <fieldset class="popup__input-container">
+                        <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Введите имя">
+                        <input class="popup__item popup__item_el_about" type="text" name="about" placeholder="О себе в двух словах">
+                    </fieldset>
+                </div>
+                <fieldset class="popup__handlers">
+                    <input class="popup__button" type="submit" value="Сохранить">
+                </fieldset>
+            </form>
+        </section>
+    </body>
+</html>

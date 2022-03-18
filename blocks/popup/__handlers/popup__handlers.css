@@ -1,0 +1,18 @@
+.popup__handlers {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    width: 100%;
+    max-width: 358px;
+    min-width: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+    .popup__handlers {
+        max-width: 238px;
+    }
+}

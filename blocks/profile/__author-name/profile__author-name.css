@@ -1,0 +1,16 @@
+.profile__author-name {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 700px) {
+    .profile__author-name {
+        text-align: center;
+        font-size: 27px;
+        line-height: 33px;
+    }
+}

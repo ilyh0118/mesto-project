@@ -1,0 +1,12 @@
+.content {
+    padding: 0 19px;
+    padding-top: calc(42px + 2 * ((100% - 320px)/(880 - 320))); 
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    max-width: 918px;
+    min-width: 282px;
+}
