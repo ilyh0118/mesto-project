@@ -16,7 +16,6 @@
     <body class="page">
         <header class="header">
             <img class="header__logo" src="./images/logo_mesto.svg" alt="логотип проекта">
-            <div class="header__line"></div>
         </header>
         <main class="content">
             <section class="profile">
@@ -25,13 +24,12 @@
                     <h1 class="profile__author-name">
                         Жак-Ив Кусто
                     </h1>
-                    <h3 class="profile__about-author">
+                    <p class="profile__about-author">
                         Исследователь океана
-                    </h3>
-                    <img class="profile__info-edit" src="./images/Edit_Button.svg" alt="иконка редактирования">
+                    </p>
+                    <button class="profile__info-edit" type="button"></button>
                 </div>
-                <div class="profile__add-btn">
-                </div>
+                <button class="profile__add-btn" type="button"></button>
             </section>
             <section class="elements">
                 <ul class="elements__grid list">
@@ -41,10 +39,7 @@
                             <h3 class="elements__title">
                                 Карачаевск
                             </h3>
-                            <label class="elements__label">
-                                <input class="checkbox checkbox_el_like" type="checkbox">
-                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
-                            </label>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="elements__group">
@@ -53,10 +48,7 @@
                             <h3 class="elements__title">
                                 Гора Эльбрус
                             </h3>
-                            <label class="elements__label">
-                                <input class="checkbox checkbox_el_like" type="checkbox" checked>
-                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
-                            </label>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="elements__group">
@@ -65,10 +57,7 @@
                             <h3 class="elements__title">
                                 Домбай
                             </h3>
-                            <label class="elements__label">
-                                <input class="checkbox checkbox_el_like" type="checkbox">
-                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
-                            </label>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="elements__group">
@@ -77,10 +66,7 @@
                             <h3 class="elements__title">
                                 Гора Эльбрус
                             </h3>
-                            <label class="elements__label">
-                                <input class="checkbox checkbox_el_like" type="checkbox" checked>
-                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
-                            </label>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="elements__group">
@@ -89,10 +75,7 @@
                             <h3 class="elements__title">
                                 Домбай
                             </h3>
-                            <label class="elements__label">
-                                <input class="checkbox checkbox_el_like" type="checkbox">
-                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
-                            </label>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </li>
                     <li class="elements__group">
@@ -101,36 +84,29 @@
                             <h3 class="elements__title">
                                 Карачаево-Черкесия
                             </h3>
-                            <label class="elements__label">
-                                <input class="checkbox checkbox_el_like" type="checkbox" checked>
-                                <span class="pseudo-checkbox pseudo-checkbox_el_like"></span>
-                            </label>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </li>                    
                 </ul>
             </section>
         </main>
         <footer class="footer">
-            <h4 class="footer__copyright">
+            <p class="footer__copyright">
                 &copy; 2022 Mesto Russia
-            </h4>
+            </p>
         </footer>
         <section class="popup">
-            <form class="popup__container">
-                <div class="popup__toggle">
-                    <img class="popup__toggle-image" src="./images/close_icon.svg" alt="крестик-закрыть">
-                </div>
-                <div class="popup__main-container">
-                    <h2 class="popup__heading">
-                        Редактировать профиль
-                    </h2>
-                    <fieldset class="popup__input-container">
-                        <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Введите имя">
-                        <input class="popup__item popup__item_el_about" type="text" name="about" placeholder="О себе в двух словах">
-                    </fieldset>
-                </div>
+            <form class="popup__container" name="profile-edit-form">
+                <button class="popup__toggle" type="button"></button>
+                <h2 class="popup__heading">
+                    Редактировать профиль
+                </h2>
+                <fieldset class="popup__input-container">
+                    <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Введите имя">
+                    <input class="popup__item popup__item_el_about" type="text" name="about" placeholder="О себе в двух словах">
+                </fieldset>
                 <fieldset class="popup__handlers">
-                    <input class="popup__button" type="submit" value="Сохранить">
+                    <button class="popup__button" type="submit">Сохранить</button>
                 </fieldset>
             </form>
         </section>

@@ -3,7 +3,7 @@
     padding: 0 20px 0 21px;
     box-sizing: border-box;
     width: 100%;
-    height: 79px;
+    min-height: 78px;
     display: flex;
     align-items: center;
     justify-content: space-between;

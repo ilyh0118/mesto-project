@@ -1,17 +1,19 @@
 .profile__info {
+    margin: 23px 0 0 31px;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0 0 0 30px;
-    width: 293px;
     display: flex;
     flex-direction: column;
     position: relative;
-    
+    width: 312px;
 }
 
 @media screen and (max-width: 700px) {
     .profile__info {
-        width: 282px;
+        width: 189px;
+        margin-left: 0;
+        margin-top: 25px;
         justify-content: center;
-        margin: 25px 0 0;
+        align-items: center;
     }
 }

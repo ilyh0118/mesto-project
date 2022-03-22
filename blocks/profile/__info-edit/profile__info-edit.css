@@ -2,12 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: absolute;
+    border: 0;
+    height: 24px;
     width: 24px;
-    object-fit: cover;
-    right: -43px;
-    top: 15px;
     transition: opacity .3s;
+    background-image: url(../../../images/Edit_Button.svg);
+    background-color: black;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -22px;
+    top: 15px;
+    cursor: pointer;
 }
 
 .profile__info-edit:hover {    
@@ -15,10 +20,9 @@
 }
 
 @media screen and (max-width: 700px) {
-    .profile__info-edit {
-        margin: 0;
-        width: 18px;
-        right: 19px;
-        top: 8px;
+    .profile__info-edit {   
+        transform: scale(.8);
+        right: -31px;
+        top: 6px;
     }
 }

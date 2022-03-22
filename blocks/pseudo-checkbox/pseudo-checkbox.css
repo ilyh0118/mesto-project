@@ -1,8 +1,0 @@
-.pseudo-checkbox {
-    display: inline-block;
-    vertical-align: middle;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: opacity .3s;
-}

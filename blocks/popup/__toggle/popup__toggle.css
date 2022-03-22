@@ -1,16 +1,31 @@
 .popup__toggle {
     margin: 0;
     padding: 0;
-    display: flex;
+    border: 0;
     box-sizing: border-box;
+    width: 32px;
+    height: 32px;
     position: absolute;
     top: -41px;
     right: -40px;
+    transition: opacity .3s;
+    background-image: url("../../../images/close_icon.svg");
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.popup__toggle:hover {
+    opacity: .6;
 }
 
 @media screen and (max-width: 700px) {
     .popup__toggle {
-        right: 0;
+        width: 20px;
+        height: 20px;
         top: -36px;
+        right: 0;
     }
 }
