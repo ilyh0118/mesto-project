@@ -5,18 +5,12 @@
     border: 0;
     height: 24px;
     width: 24px;
-    transition: opacity .3s;
     background-image: url(../../../images/Edit_Button.svg);
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     position: absolute;
     right: -22px;
     top: 15px;
-    cursor: pointer;
-}
-
-.profile__info-edit:hover {    
-    opacity: .6;
 }
 
 @media screen and (max-width: 700px) {

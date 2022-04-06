@@ -27,78 +27,12 @@
                     <p class="profile__about-author">
                         Исследователь океана
                     </p>
-                    <button class="profile__info-edit no" type="button"></button>
+                    <button class="profile__info-edit hover-reaction hover-reaction_el_button" type="button"></button>
                 </div>
-                <button class="profile__add-btn" type="button"></button>
+                <button class="profile__add-btn hover-reaction hover-reaction_el_button" type="button"></button>
             </section>
-            <section class="cards">
+            <section class="cards" aria-label="секция карточек">
                 <ul class="cards__grid list">
-                    <!-- <li class="cards__item">
-                        <div class="cards__image-container">
-                            <img class="cards__image" src="./images/karachayevsk.jpg" alt="карачаевск">
-                        </div>
-                        <div class="cards__title-section">
-                            <h3 class="cards__title">
-                                Карачаевск
-                            </h3>
-                            <button class="cards__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="cards__image-container">
-                            <img class="cards__image" src="./images/elbrus.jpg" alt="эльбрус">
-                        </div>
-                        <div class="cards__title-section">
-                            <h3 class="cards__title">
-                                Гора Эльбрус
-                            </h3>
-                            <button class="cards__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="cards__image-container">
-                            <img class="cards__image" src="./images/dombay.jpg" alt="домбай">                            
-                        </div>
-                        <div class="cards__title-section">
-                            <h3 class="cards__title">
-                                Домбай
-                            </h3>
-                            <button class="cards__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="cards__image-container">
-                            <img class="cards__image" src="./images/elbrus.jpg" alt="эльбрус">                            
-                        </div>
-                        <div class="cards__title-section">
-                            <h3 class="cards__title">
-                                Гора Эльбрус
-                            </h3>
-                            <button class="cards__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="cards__image-container">
-                            <img class="cards__image" src="./images/dombay.jpg" alt="домбай">
-                        </div>
-                        <div class="cards__title-section">
-                            <h3 class="cards__title">
-                                Домбай
-                            </h3>
-                            <button class="cards__like-button" type="button"></button>
-                        </div>
-                    </li>
-                    <li class="cards__item">
-                        <div class="cards__image-container">
-                            <img class="cards__image" src="./images/karachayevsk.jpg" alt="карачаево-черкесия">
-                        </div>
-                        <div class="cards__title-section">
-                            <h3 class="cards__title">
-                                Карачаево-Черкесия
-                            </h3>
-                            <button class="cards__like-button" type="button"></button>
-                        </div>
-                    </li> -->
                 </ul>
             </section>
         </main>
@@ -108,28 +42,33 @@
             </p>
         </footer>
         <section class="popup">
-            <form class="popup__container" name="profile-edit-form">
-                <button class="popup__toggle" type="button"></button>
+            <div class="popup__container">
+                <button class="popup__toggle hover-reaction hover-reaction_el_button" type="button"></button>
                 <h2 class="popup__heading">
                     Редактировать профиль
-                </h2>   
-                <fieldset class="popup__input-container">
-                    <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Введите имя">
-                    <input class="popup__item popup__item_el_about" type="text" name="about" placeholder="О себе в двух словах">
-                </fieldset>
-                <fieldset class="popup__handlers">
-                    <button class="popup__button" type="submit">Сохранить</button>
-                </fieldset>
-            </form>
+                </h2>
+                <form class="popup__form" name="profile-edit-form">
+                    <fieldset class="popup__input-container">
+                        <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Введите имя">
+                        <input class="popup__item popup__item_el_about" type="text" name="about" placeholder="О себе в двух словах">
+                    </fieldset>
+                    <fieldset class="popup__handlers">
+                        <button class="popup__button hover-reaction hover-reaction_el_submit" type="submit">Сохранить</button>
+                    </fieldset>
+                </form>
+                <figure class="popup__figure">
+                    <img class="popup__figure-img" src="./images/elbrus.jpg" alt="Эльбрус">
+                    <figcaption class="popup__figure-caption"></figcaption>
+                </figure>
+            </div>
         </section>
         <template id="card-template">
             <li class="cards__item">
-                <div class="cards__image-container">
-                    <img class="cards__image" src="" alt="">
-                </div>
+                <div class="cards__image hover-reaction"></div>
+                <button class="cards__remove-button hover-reaction hover-reaction_el_button" type="button"></button>
                 <div class="cards__title-section">
                     <h3 class="cards__title"></h3>
-                    <button class="cards__like-button" type="button"></button>
+                    <button class="cards__like-button hover-reaction hover-reaction_el_like" type="button"></button>
                 </div>
             </li>
         </template>

@@ -20,7 +20,7 @@
 @import url("../blocks/cards/cards.css");
 @import url("../blocks/cards/__grid/cards__grid.css");
 @import url("../blocks/cards/__item/cards__item.css");
-@import url("../blocks/cards/__image-container/cards__image-container.css");
+@import url("../blocks/cards/__remove-button/cards__remove-button.css");
 @import url("../blocks/cards/__image/cards__image.css");
 @import url("../blocks/cards/__title-section/cards__title-section.css");
 @import url("../blocks/cards/__title/cards__title.css");
@@ -32,12 +32,22 @@
 
 @import url("../blocks/popup/popup.css");
 @import url("../blocks/popup/_opened/popup_opened.css");
+@import url("../blocks/popup/_content/popup_content_figure.css");
 @import url("../blocks/popup/__container/popup__container.css");
+@import url("../blocks/popup/__container/_content/popup__container_content_figure.css");
 @import url("../blocks/popup/__toggle/popup__toggle.css");
 @import url("../blocks/popup/__heading/popup__heading.css");
 @import url("../blocks/popup/__input-container/popup__input-container.css");
 @import url("../blocks/popup/__item/popup__item.css");
 @import url("../blocks/popup/__handlers/popup__handlers.css");
 @import url("../blocks/popup/__button/popup__button.css");
+@import url("../blocks/popup/__figure/popup__figure.css");
+@import url("../blocks/popup/__figure-img/popup__figure-img.css");
+@import url("../blocks/popup/__figure-caption/popup__figure-caption.css");
 
+@import url("../blocks/hide/hide.css");
 @import url("../blocks/list/list.css");
+@import url("../blocks/hover-reaction/hover-reaction.css");
+@import url("../blocks/hover-reaction/_el/hover-reaction_el_button.css");
+@import url("../blocks/hover-reaction/_el/hover-reaction_el_like.css");
+@import url("../blocks/hover-reaction/_el/hover-reaction_el_submit.css");

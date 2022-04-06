@@ -1,0 +1,7 @@
+.hover-reaction_el_submit {
+    transition: opacity .3s;
+}
+
+.hover-reaction_el_submit:hover {
+    opacity: .8;
+}

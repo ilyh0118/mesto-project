@@ -1,6 +1,6 @@
 .popup {
     margin: 0 auto;
-    padding: 0;    
+    padding: 0;
     border: 0;
     box-sizing: border-box;
     position: fixed;
@@ -13,5 +13,5 @@
     justify-content: center;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .25s,  visibility .2s;
+    transition: opacity .25s, visibility .2s;
 }

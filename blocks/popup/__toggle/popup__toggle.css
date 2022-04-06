@@ -8,17 +8,11 @@
     position: absolute;
     top: -41px;
     right: -40px;
-    transition: opacity .3s;
     background-image: url("../../../images/close_icon.svg");
     background-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    cursor: pointer;
-}
-
-.popup__toggle:hover {
-    opacity: .6;
 }
 
 @media screen and (max-width: 700px) {

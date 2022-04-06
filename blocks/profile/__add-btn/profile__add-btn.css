@@ -7,15 +7,9 @@
     border: 2px solid white;
     border-radius: 2px;
     background-image: url(../../../images/Add_Button.svg);
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     background-position: center;
-    transition: opacity .3s;
-    cursor: pointer;
-}
-
-.profile__add-btn:hover {
-    opacity: .6;
 }
 
 @media screen and (max-width: 700px) {

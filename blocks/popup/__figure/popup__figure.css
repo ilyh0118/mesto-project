@@ -1,0 +1,8 @@
+.popup__figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(100px,min-content);
+    gap: 10px;
+}

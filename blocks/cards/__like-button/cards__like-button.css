@@ -6,15 +6,9 @@
     height: 19px;
     border: 0;
     background-image: url(../../../images/like.svg);
-    background-color: inherit;
+    background-color: rgba(0, 0, 0, 0);
     display: inline-block;
     vertical-align: middle;
     background-position: top;
     background-repeat: no-repeat;
-    cursor: pointer;
-    transition: opacity .1s;
 }
-/*
-.cards__like-button:not(:active):hover {
-    opacity: .5;
-}*/

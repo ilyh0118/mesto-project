@@ -1,0 +1,7 @@
+.hover-reaction_el_button {
+    transition: opacity .25s;
+}
+
+.hover-reaction_el_button:hover {
+    opacity: .6;
+}

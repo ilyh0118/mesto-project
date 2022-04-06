@@ -1,0 +1,7 @@
+.hover-reaction_el_like {
+    transition: opacity .2s;
+}
+
+.hover-reaction_el_like:not(.cards__like-button_active):hover {
+    opacity: .5;
+}
