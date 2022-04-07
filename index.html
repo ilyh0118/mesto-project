@@ -41,7 +41,7 @@
                 &copy; 2022 Mesto Russia
             </p>
         </footer>
-        <section class="popup">
+        <section class="popup profile-popup">
             <div class="popup__container">
                 <button class="popup__toggle hover-reaction hover-reaction_el_button" type="button"></button>
                 <h2 class="popup__heading">
@@ -56,6 +56,28 @@
                         <button class="popup__button hover-reaction hover-reaction_el_submit" type="submit">Сохранить</button>
                     </fieldset>
                 </form>
+            </div>
+        </section>
+        <section class="popup place-popup">
+            <div class="popup__container">
+                <button class="popup__toggle hover-reaction hover-reaction_el_button" type="button"></button>
+                <h2 class="popup__heading">
+                    Новое место
+                </h2>
+                <form class="popup__form" name="create-place-form">
+                    <fieldset class="popup__input-container">
+                        <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Название">
+                        <input class="popup__item popup__item_el_about" type="text" name="about" placeholder="Ссылка на картинку">
+                    </fieldset>
+                    <fieldset class="popup__handlers">
+                        <button class="popup__button hover-reaction hover-reaction_el_submit" type="submit">Создать</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section class="popup popup_content_figure figure-popup" aria-label="всплывающее окно с фотографией">
+            <div class="popup__container popup__container_content_figure">
+                <button class="popup__toggle hover-reaction hover-reaction_el_button" type="button"></button>
                 <figure class="popup__figure">
                     <img class="popup__figure-img" src="./images/elbrus.jpg" alt="Эльбрус">
                     <figcaption class="popup__figure-caption"></figcaption>
