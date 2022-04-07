@@ -53,52 +53,40 @@ const figurePopupCaption  = figurePopup.querySelector('.popup__figure-caption');
 
 
 // объявления функций
-function setFigurePopup(eventItem) {
-  const currentCardsItem = eventItem.parentElement;
-  const url = currentCardsItem.querySelector('.cards__image').style.backgroundImage.slice(5,-2);
-  const caption = currentCardsItem.querySelector('.cards__title').textContent;
+function handleCardClick(caption, url) {
   figurePopupImage.src = url;
   figurePopupImage.alt = caption;
   figurePopupCaption.textContent = caption;
-};
+}
 
 function openPopup(item) {
   item.classList.add('popup_opened');
 }
 
-function returnCardMarkupArray() {
-  //[card, img, title, likeBtn, removeBtn]
+function createCard(name, link) {
   const cardTemplate = page.querySelector('#card-template').content;
   const card = cardTemplate.querySelector('.cards__item').cloneNode(true);
-  const markupCardArray = [
-    card,
-    card.querySelector('.cards__image'),
-    card.querySelector('.cards__title'),
-    card.querySelector('.cards__like-button'),
-    card.querySelector('.cards__remove-button')
-  ];
-  return markupCardArray;
-}
-
-function fillTemplate(name, link) {
-  const markupArray = returnCardMarkupArray();
-  markupArray[1].style.backgroundImage = `url(${link})`;
-  markupArray[1].addEventListener('click', evt => {
-    setFigurePopup(evt.target);
+  const cardImage = card.querySelector('.cards__image');
+  const cardTitle = card.querySelector('.cards__title');
+  const cardLikeButtonn = card.querySelector('.cards__like-button');
+  const cardRemoveButton = card.querySelector('.cards__remove-button');
+  cardTitle.textContent = name;
+  cardLikeButtonn.addEventListener('click', evt => evt.target.classList.toggle('cards__like-button_active'));
+  cardRemoveButton.addEventListener('click', evt => evt.target.closest('.cards__item').remove());
+  cardImage.style.backgroundImage = `url(${link})`;
+  cardImage.addEventListener('click', () => {
+    handleCardClick(name, link);
     openPopup(figurePopup);
   });
-  markupArray[2].textContent = name;
-  markupArray[3].addEventListener('click', evt => evt.target.classList.toggle('cards__like-button_active'));
-  markupArray[4].addEventListener('click', evt => evt.target.closest('.cards__item').remove());
-  return markupArray[0];
+  return card;
 }
 
-function createCard(initCard) {
+function getCard(initCard) {
   if (initCard) {
-    return fillTemplate(initCard.name, initCard.link);
+    return createCard(initCard.name, initCard.link);
   } 
   else {
-    return fillTemplate(placePopupNameItem.value, placePopupLinkItem.value);
+    return createCard(placePopupNameItem.value, placePopupLinkItem.value);
   }  
 }
 
@@ -107,28 +95,31 @@ function insertCard(card) {
 }
 
 function addCard(cardParams) {
-  const newCard = createCard(cardParams);
+  const newCard = getCard(cardParams);
   insertCard(newCard);
 }
 
 function initialAddCards() {
-  initialCards.forEach(elem => {
-    addCard(elem);
-  });
+  initialCards.forEach(addCard);
 }
 
-function callProfileSubmitHandler (evt) {
+function handleProfileSubmit (evt) {
   evt.preventDefault();
   profileName.textContent = profilePopupNameItem.value;
   profileAbout.textContent = profilePopupAboutItem.value;
 }
 
-function callPlaceSubmitHandler (evt) {
+function handlePlaceSubmit (evt) {
   evt.preventDefault();
   addCard();
 }
 
-function setProfilePopup() {
+function clearPlacePopupInputs() {
+  placePopupNameItem.value = '';
+  placePopupLinkItem.value = '';
+}
+
+function handleEditButtonClick() {
   profilePopupNameItem.value = profileName.innerText;
   profilePopupAboutItem.value = profileAbout.innerText;
 }
@@ -145,21 +136,22 @@ initialAddCards();
 
 // обработчики открытий popup
 profileEditButton.addEventListener('click', evt => {
-  setProfilePopup();
+  handleEditButtonClick();
   openPopup(profilePopup);
 });
 profileAddCardButton.addEventListener('click', elem => openPopup(placePopup));
 // обработчики profile-popup
 profilePopupToggleButton.addEventListener('click', elem => closePopup(getCurrentPopup(elem.target)));
 profilePopupForm.addEventListener('submit', elem => {
-  callProfileSubmitHandler(elem);
+  handleProfileSubmit(elem);
   closePopup(getCurrentPopup(elem.target));
 });
 // обработчики place-popup
 placePopupToggleButton.addEventListener('click', elem => closePopup(getCurrentPopup(elem.target)));
 placePopupForm.addEventListener('submit', elem => {
-  callPlaceSubmitHandler(elem);
+  handlePlaceSubmit(elem);
   closePopup(getCurrentPopup(elem.target));
+  clearPlacePopupInputs();
 });
 // обработчики place-popup
 figurePopupToggleButton.addEventListener('click', elem => closePopup(getCurrentPopup(elem.target)));
