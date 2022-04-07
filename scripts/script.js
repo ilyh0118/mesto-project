@@ -86,7 +86,7 @@ function fillTemplate(name, link) {
   markupArray[1].addEventListener('click', evt => {
     setFigurePopup(evt.target);
     openPopup(figurePopup);
-  })
+  });
   markupArray[2].textContent = name;
   markupArray[3].addEventListener('click', evt => evt.target.classList.toggle('cards__like-button_active'));
   markupArray[4].addEventListener('click', evt => evt.target.closest('.cards__item').remove());
